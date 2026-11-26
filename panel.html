@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Área privada de pacientes de Clínica Horizonte.">
+
+    <title>Mi espacio | Clínica Horizonte</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script type="module" src="js/auth.js" defer></script>
+</head>
+
+<body class="panel-body">
+
+    <!-- CABECERA -->
+    <header class="panel-header">
+        <div class="panel-header-contenido">
+
+            <a href="index.html" class="panel-marca">
+                <span class="panel-logo">H</span>
+
+                <span>
+                    <strong>CLÍNICA HORIZONTE</strong>
+                    <small>Portal de pacientes</small>
+                </span>
+            </a>
+
+            <button type="button" id="btnCerrarSesion"
+                    class="panel-btn-salir">
+                Cerrar sesión
+            </button>
+
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="panel-main">
+
+        <!-- BIENVENIDA -->
+        <section class="panel-bienvenida">
+
+            <div>
+                <span class="panel-etiqueta">ÁREA PERSONAL</span>
+
+                <h1>
+                    ¡Bienvenido/a,
+                    <span id="nombreUsuario">...</span>!
+                </h1>
+
+                <p>
+                    Desde este espacio puedes consultar y gestionar
+                    tu información como paciente de Clínica Horizonte.
+                </p>
+            </div>
+
+            <div class="panel-icono-bienvenida">
+                H
+            </div>
+
+        </section>
+
+        <!-- INFORMACIÓN DE LA CUENTA -->
+        <section class="panel-seccion">
+
+            <div class="panel-titulo-seccion">
+                <h2>Mi cuenta</h2>
+                <p>Información de tu perfil personal.</p>
+            </div>
+
+            <div class="panel-cuenta">
+
+                <div class="panel-avatar">H</div>
+
+                <div class="panel-datos">
+
+                    <h3 id="nombreUsuarioSecundario">Mi perfil</h3>
+
+                    <p>
+                        <strong>Correo electrónico:</strong>
+                        <span id="emailUsuario">Cargando...</span>
+                    </p>
+
+                    <p>
+                        <strong>Apellidos:</strong>
+                        <span id="apellidosUsuario">Cargando...</span>
+                    </p>
+
+                    <p>
+                        <strong>Teléfono:</strong>
+                        <span id="telefonoUsuario">Cargando...</span>
+                    </p>
+
+                    <p>
+                        <strong>Fecha de nacimiento:</strong>
+                        <span id="fechaNacimientoUsuario">Cargando...</span>
+                    </p>
+
+                    <p>
+                        <strong>Dirección:</strong>
+                        <span id="direccionUsuario">Cargando...</span>
+                    </p>
+
+                    <span class="panel-estado">
+                        Cuenta registrada
+                    </span>
+
+                    <div class="panel-acciones-perfil">
+
+                        <button type="button" id="btnEditarDatos">
+                            Editar mis datos
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- FORMULARIO DE EDICIÓN DE DATOS -->
+        <section class="panel-seccion" id="seccionEditarDatos" hidden>
+
+            <div class="panel-titulo-seccion">
+
+                <h2>Editar mis datos</h2>
+
+                <p>
+                    Modifica tu información personal y guarda los cambios.
+                </p>
+
+            </div>
+
+            <div class="panel-cuenta">
+
+                <form id="editarDatosForm" class="formulario-edicion">
+
+                    <!-- NOMBRE -->
+                    <div class="grupo-formulario">
+
+                        <label for="nombreEditar">
+                            Nombre
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nombreEditar"
+                            name="nombre"
+                            required
+                            maxlength="50"
+                        >
+
+                    </div>
+
+                    <!-- APELLIDOS -->
+                    <div class="grupo-formulario">
+
+                        <label for="apellidosEditar">
+                            Apellidos
+                        </label>
+
+                        <input
+                            type="text"
+                            id="apellidosEditar"
+                            name="apellidos"
+                            required
+                            maxlength="100"
+                        >
+
+                    </div>
+
+                    <!-- TELÉFONO -->
+                    <div class="grupo-formulario">
+
+                        <label for="telefonoEditar">
+                            Teléfono
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="telefonoEditar"
+                            name="telefono"
+                            required
+                            maxlength="15"
+                        >
+
+                    </div>
+
+                    <!-- FECHA DE NACIMIENTO -->
+                    <div class="grupo-formulario">
+
+                        <label for="fechaNacimientoEditar">
+                            Fecha de nacimiento
+                        </label>
+
+                        <input
+                            type="date"
+                            id="fechaNacimientoEditar"
+                            name="fechaNacimiento"
+                            required
+                        >
+
+                    </div>
+
+                    <!-- DIRECCIÓN -->
+                    <div class="grupo-formulario">
+
+                        <label for="direccionEditar">
+                            Dirección
+                        </label>
+
+                        <input
+                            type="text"
+                            id="direccionEditar"
+                            name="direccion"
+                            required
+                            maxlength="150"
+                        >
+
+                    </div>
+
+                    <!-- BOTONES -->
+                    <div class="acciones-formulario">
+
+                        <button type="submit" id="btnGuardarDatos">
+                            Guardar cambios
+                        </button>
+
+                        <button type="button" id="btnCancelarEdicion">
+                            Cancelar
+                        </button>
+
+                    </div>
+
+                    <p id="mensajeEdicion" class="mensaje-formulario"></p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+        <!-- SERVICIOS -->
+        <section class="panel-seccion">
+
+            <div class="panel-titulo-seccion">
+
+                <h2>Mis servicios</h2>
+
+                <p>
+                    Próximamente podrás gestionar tus servicios sanitarios
+                    desde este espacio.
+                </p>
+
+            </div>
+
+            <div class="panel-servicios">
+
+                <article class="panel-servicio">
+
+                    <div class="panel-servicio-icono">01</div>
+
+                    <h3>Mis citas</h3>
+
+                    <p>
+                        Consulta tus próximas citas médicas
+                        y su información.
+                    </p>
+
+                    <span>Próximamente</span>
+
+                </article>
+
+                <article class="panel-servicio">
+
+                    <div class="panel-servicio-icono">02</div>
+
+                    <h3>Historial clínico</h3>
+
+                    <p>
+                        Accede a la información de tu historial
+                        médico personal.
+                    </p>
+
+                    <span>Próximamente</span>
+
+                </article>
+
+                <article class="panel-servicio">
+
+                    <div class="panel-servicio-icono">03</div>
+
+                    <h3>Mis datos</h3>
+
+                    <p>
+                        Consulta y gestiona tus datos personales
+                        y de contacto.
+                    </p>
+
+                    <span>Próximamente</span>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <p id="mensajePanel" class="mensaje-formulario"></p>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="panel-footer">
+
+        <p>
+            © Clínica Horizonte | Portal de pacientes
+        </p>
+
+        <p>
+            Tu salud, nuestra prioridad.
+        </p>
+
+    </footer>
+
+</body>
+</html>

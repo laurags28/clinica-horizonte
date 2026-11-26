@@ -1136,3 +1136,708 @@ a:focus-visible {
     background-color: var(--color-error-background);
     color: var(--color-error);
 }
+
+
+/* ==========================================
+   15. PÁGINA DE INICIO DE SESIÓN
+========================================== */
+
+.pagina-login {
+    min-height: 650px;
+    padding: 65px 0 80px;
+    background-color: var(--color-background);
+}
+
+/* Introducción */
+
+.login-introduccion {
+    max-width: 650px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+.login-introduccion h1 {
+    margin: 12px 0;
+    color: var(--color-primary);
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.login-introduccion p {
+    color: var(--color-text-secondary);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* Tarjeta de inicio de sesión */
+
+.tarjeta-login {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-large);
+    box-shadow: var(--shadow-card);
+}
+
+
+/* Cabecera de la tarjeta */
+
+.login-cabecera {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.login-icono {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.login-cabecera h2 {
+    margin-bottom: 10px;
+    color: var(--color-primary);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.login-cabecera p {
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* Campos del formulario */
+
+.tarjeta-login .grupo-formulario {
+    margin-bottom: 22px;
+}
+
+.tarjeta-login .grupo-formulario label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.tarjeta-login .grupo-formulario input {
+    width: 100%;
+    height: 48px;
+    padding: 12px 16px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-medium);
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    font-size: 14px;
+    outline: none;
+    transition: var(--transition);
+}
+
+.tarjeta-login .grupo-formulario input::placeholder {
+    color: var(--color-text-secondary);
+}
+
+.tarjeta-login .grupo-formulario input:focus {
+    border: 2px solid var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(36, 157, 154, 0.12);
+}
+
+.tarjeta-login .grupo-formulario input.error {
+    border: 2px solid var(--color-error);
+    background-color: var(--color-error-background);
+}
+
+
+/* Campo de contraseña */
+
+.tarjeta-login .campo-password {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.tarjeta-login .campo-password input {
+    padding-right: 55px;
+}
+
+
+/* Botón de inicio de sesión */
+
+.boton-login {
+    width: 100%;
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+
+/* Recuperación de contraseña */
+
+.recuperar-password {
+    margin-top: -10px;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.recuperar-password a {
+    color: var(--color-secondary);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.recuperar-password a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+
+/* Enlace al registro */
+
+.enlace-registro-login {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.enlace-registro-login p {
+    color: var(--color-text-secondary);
+    font-size: 14px;
+}
+
+.enlace-registro-login a {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.enlace-registro-login a:hover {
+    color: var(--color-secondary);
+    text-decoration: underline;
+}
+
+
+/* Responsive */
+
+@media (max-width: 767px) {
+
+    .pagina-login {
+        min-height: auto;
+        padding: 45px 0 60px;
+    }
+
+    .login-introduccion h1 {
+        font-size: 30px;
+    }
+
+    .tarjeta-login {
+        padding: 28px 22px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .login-introduccion h1 {
+        font-size: 27px;
+    }
+
+    .tarjeta-login {
+        padding: 24px 17px;
+    }
+
+}
+
+/* ========================================
+   PANEL PRIVADO - CLÍNICA HORIZONTE
+======================================== */
+
+.panel-body {
+    margin: 0;
+    background-color: #f3f7fa;
+    color: #193b55;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+/* CABECERA */
+
+.panel-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e1e8ed;
+    padding: 16px 6%;
+}
+
+.panel-header-contenido {
+    max-width: 1150px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.panel-marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #193b55;
+}
+
+.panel-marca strong {
+    display: block;
+    font-size: 17px;
+    letter-spacing: 0.4px;
+}
+
+.panel-marca small {
+    display: block;
+    color: #718394;
+    margin-top: 3px;
+}
+
+.panel-logo {
+    background-color: #193b55;
+    color: white;
+    width: 43px;
+    height: 43px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.panel-btn-salir {
+    background-color: #193b55;
+    color: white;
+    border: none;
+    padding: 11px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.panel-btn-salir:hover {
+    background-color: #247f88;
+}
+
+/* CONTENIDO PRINCIPAL */
+
+.panel-main {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 45px 25px;
+}
+
+/* BIENVENIDA */
+
+.panel-bienvenida {
+    background: linear-gradient(120deg, #193b55, #247f88);
+    color: white;
+    padding: 38px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.panel-etiqueta {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #bce7e5;
+}
+
+.panel-bienvenida h1 {
+    font-size: 29px;
+    margin: 15px 0 10px;
+}
+
+.panel-bienvenida p {
+    line-height: 1.6;
+    color: #e2f0f2;
+    max-width: 600px;
+}
+
+.panel-icono-bienvenida {
+    width: 85px;
+    height: 85px;
+    border: 2px solid #ffffff80;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* SECCIONES */
+
+.panel-seccion {
+    margin-bottom: 38px;
+}
+
+.panel-titulo-seccion {
+    margin-bottom: 20px;
+}
+
+.panel-titulo-seccion h2 {
+    font-size: 22px;
+    margin-bottom: 7px;
+}
+
+.panel-titulo-seccion p {
+    color: #718394;
+    font-size: 14px;
+}
+
+/* DATOS DE LA CUENTA */
+
+.panel-cuenta {
+    background-color: white;
+    border: 1px solid #e3eaf0;
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 3px 12px #193b550a;
+}
+
+.panel-avatar {
+    width: 65px;
+    height: 65px;
+    background-color: #e4f2f2;
+    color: #247f88;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.panel-datos h3 {
+    margin: 0 0 12px;
+}
+
+.panel-datos p {
+    font-size: 14px;
+    color: #617587;
+    overflow-wrap: anywhere;
+}
+
+.panel-estado {
+    display: inline-block;
+    background-color: #e4f5ed;
+    color: #26734d;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* TARJETAS DE SERVICIOS */
+
+.panel-servicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.panel-servicio {
+    background-color: white;
+    border: 1px solid #e3eaf0;
+    border-radius: 12px;
+    padding: 24px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.panel-servicio:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 20px #193b5512;
+}
+
+.panel-servicio-icono {
+    width: 42px;
+    height: 42px;
+    background-color: #e4f2f2;
+    color: #247f88;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+    font-weight: bold;
+}
+
+.panel-servicio h3 {
+    margin: 18px 0 10px;
+    font-size: 17px;
+}
+
+.panel-servicio p {
+    color: #718394;
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 65px;
+}
+
+.panel-servicio span {
+    color: #247f88;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* PIE DE PÁGINA */
+
+.panel-footer {
+    background-color: #193b55;
+    color: white;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+}
+
+/* DISEÑO RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .panel-main {
+        padding: 25px 18px;
+    }
+
+    .panel-bienvenida {
+        padding: 25px;
+    }
+
+    .panel-bienvenida h1 {
+        font-size: 23px;
+    }
+
+    .panel-icono-bienvenida {
+        display: none;
+    }
+
+    .panel-servicios {
+        grid-template-columns: 1fr;
+    }
+
+    .panel-footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .panel-header {
+        padding: 13px;
+    }
+
+    .panel-marca strong {
+        font-size: 13px;
+    }
+
+    .panel-marca small {
+        font-size: 11px;
+    }
+
+    .panel-btn-salir {
+        padding: 9px 11px;
+        font-size: 12px;
+    }
+
+    .panel-bienvenida {
+        padding: 22px;
+    }
+
+    .panel-bienvenida h1 {
+        font-size: 20px;
+    }
+
+    .panel-cuenta {
+        padding: 18px;
+        align-items: flex-start;
+    }
+
+}
+
+/* ========================================
+   16. FORMULARIO DE EDICIÓN DE DATOS
+   ======================================== */
+
+/* Tarjeta que contiene el formulario */
+.panel-main form {
+    margin: 0 0 38px;
+    padding: 30px;
+    background-color: #ffffff;
+    border: 1px solid #e3eaf0;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(25, 59, 85, 0.06);
+}
+
+/* Etiquetas de los campos */
+.panel-main form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #193b55;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Campos de texto y fecha */
+.panel-main form input:not([type="checkbox"]):not([type="radio"]),
+.panel-main form select,
+.panel-main form textarea {
+    display: block;
+    width: 100%;
+    max-width: 520px;
+    min-height: 46px;
+    padding: 11px 14px;
+    border: 1px solid #d8e1e8;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #333333;
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Estado de foco de los campos */
+.panel-main form input:not([type="checkbox"]):not([type="radio"]):focus,
+.panel-main form select:focus,
+.panel-main form textarea:focus {
+    border-color: #249d9a;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(36, 157, 154, 0.13);
+}
+
+/* Separación entre campos */
+.panel-main form input + br {
+    display: none;
+}
+
+/* Botones del formulario */
+.panel-main form button,
+.panel-main form input[type="submit"],
+.panel-main form input[type="button"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 43px;
+    margin: 8px 8px 0 0;
+    padding: 10px 20px;
+    border: 1px solid #193b55;
+    border-radius: 7px;
+    background-color: #193b55;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.panel-main form button:hover,
+.panel-main form input[type="submit"]:hover,
+.panel-main form input[type="button"]:hover {
+    border-color: #249d9a;
+    background-color: #249d9a;
+    transform: translateY(-1px);
+}
+
+/* Botón de cancelar, si se identifica mediante su atributo o clase */
+.panel-main form button[type="button"],
+.panel-main form .boton-cancelar {
+    border-color: #cbd6de;
+    background-color: #ffffff;
+    color: #193b55;
+}
+
+.panel-main form button[type="button"]:hover,
+.panel-main form .boton-cancelar:hover {
+    border-color: #aebdc8;
+    background-color: #f3f7fa;
+    color: #193b55;
+}
+
+/* Mensajes mostrados junto al formulario */
+.panel-main form .mensaje-formulario,
+.panel-main form + .mensaje-formulario {
+    margin-top: 16px;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .panel-main form {
+        padding: 22px 18px;
+    }
+
+    .panel-main form input:not([type="checkbox"]):not([type="radio"]),
+    .panel-main form select,
+    .panel-main form textarea {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    .panel-main form {
+        padding: 18px 15px;
+    }
+
+    .panel-main form button,
+    .panel-main form input[type="submit"],
+    .panel-main form input[type="button"] {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+
+/* ========================================
+   BOTÓN EDITAR DATOS DEL PERFIL
+======================================== */
+
+#btnEditarDatos {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 43px;
+    margin-top: 12px;
+    padding: 10px 20px;
+    border: 1px solid var(--color-primary);
+    border-radius: var(--radius-medium);
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+#btnEditarDatos:hover {
+    border-color: var(--color-secondary);
+    background-color: var(--color-secondary);
+    transform: translateY(-2px);
+}
+
+#btnEditarDatos:focus-visible {
+    outline: 2px solid var(--color-secondary);
+    outline-offset: 3px;
+}
+

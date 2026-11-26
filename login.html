@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Accede a tu cuenta de paciente de Clínica Horizonte.">
+
+    <title>Iniciar sesión | Clínica Horizonte</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Validaciones de los formularios -->
+    <script src="js/validaciones.js" defer></script>
+
+    <!-- Autenticación con Firebase -->
+    <script type="module" src="js/auth.js"></script>
+
+</head>
+
+<body>
+
+    <!-- CABECERA -->
+    <header class="cabecera">
+
+        <div class="contenedor cabecera-contenido">
+
+            <a href="index.html" class="identidad">
+
+                <span class="logo">H</span>
+
+                <span class="nombre-clinica">
+                    CLÍNICA HORIZONTE
+                </span>
+
+            </a>
+
+            <nav class="navegacion">
+
+                <a href="index.html">Inicio</a>
+
+                <a href="registro.html">Crear cuenta</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="pagina-login">
+
+        <div class="contenedor">
+
+            <!-- INTRODUCCIÓN -->
+            <section class="login-introduccion">
+
+                <h1>Bienvenido/a</h1>
+
+                <p>
+                    Accede a tu espacio personal de Clínica Horizonte.
+                </p>
+
+            </section>
+
+
+            <!-- TARJETA DE INICIO DE SESIÓN -->
+            <section class="tarjeta-login">
+
+                <!-- CABECERA DE LA TARJETA -->
+                <div class="login-cabecera">
+
+                    <div class="login-icono">
+                        H
+                    </div>
+
+                    <h2>Iniciar sesión</h2>
+
+                    <p>
+                        Introduce tus credenciales para acceder a tu cuenta.
+                    </p>
+
+                </div>
+
+
+                <!-- FORMULARIO -->
+                <form id="loginForm" novalidate>
+
+                    <!-- CORREO ELECTRÓNICO -->
+                    <div class="grupo-formulario">
+
+                        <label for="emailLogin">
+                            Correo electrónico
+                        </label>
+
+                        <input
+                            type="email"
+                            id="emailLogin"
+                            name="email"
+                            placeholder="Introduce tu correo electrónico"
+                            autocomplete="email"
+                            required
+                        >
+
+                        <span
+                            id="errorEmailLogin"
+                            class="mensaje-error"
+                        ></span>
+
+                    </div>
+
+
+                    <!-- CONTRASEÑA -->
+                    <div class="grupo-formulario">
+
+                        <label for="passwordLogin">
+                            Contraseña
+                        </label>
+
+                        <div class="campo-password">
+
+                            <input
+                                type="password"
+                                id="passwordLogin"
+                                name="password"
+                                placeholder="Introduce tu contraseña"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="boton-mostrar-password"
+                                data-toggle-password="passwordLogin"
+                                aria-label="Mostrar contraseña"
+                                aria-pressed="false"
+                            >
+                                <span aria-hidden="true">◉</span>
+                            </button>
+
+                        </div>
+
+                        <span
+                            id="errorPasswordLogin"
+                            class="mensaje-error"
+                        ></span>
+
+                    </div>
+
+
+                    <!-- RECUPERAR CONTRASEÑA -->
+                    <div class="recuperar-password">
+
+                        <a href="#" id="btnRecuperarPassword">
+                            ¿Has olvidado tu contraseña?
+                        </a>
+
+                    </div>
+
+
+                    <!-- BOTÓN DE INICIO DE SESIÓN -->
+                    <button
+                        type="submit"
+                        class="boton boton-principal boton-login"
+                    >
+                        Iniciar sesión
+                    </button>
+
+
+                    <!-- MENSAJES -->
+                    <p
+                        id="mensajeLogin"
+                        class="mensaje-formulario"
+                        aria-live="polite"
+                    ></p>
+
+                </form>
+
+
+                <!-- ENLACE AL REGISTRO -->
+                <div class="enlace-registro-login">
+
+                    <p>
+                        ¿Todavía no tienes una cuenta?
+                        <a href="registro.html">Regístrate aquí</a>.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+
+        <div class="contenedor">
+
+            <p>
+                © Clínica Horizonte. Todos los derechos reservados.
+            </p>
+
+            <p>
+                Tu salud, nuestra prioridad.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
