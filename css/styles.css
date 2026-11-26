@@ -1,0 +1,796 @@
+
+/* ==========================================
+   1. VARIABLES Y CONFIGURACIÓN GENERAL
+========================================== */
+
+:root {
+    /* Colores principales */
+    --color-primary: #173B57;
+    --color-secondary: #249D9A;
+
+    /* Fondos */
+    --color-background: #F3F7FA;
+    --color-surface: #FFFFFF;
+
+    /* Textos */
+    --color-text: #333333;
+    --color-text-secondary: #667985;
+
+    /* Estados */
+    --color-border: #E0E0E0;
+    --color-error: #D32F2F;
+    --color-error-background: #FFEBEE;
+    --color-success: #388E3C;
+    --color-success-background: #E8F5E9;
+
+    /* Tipografía */
+    --font-family: 'Inter', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+
+    /* Espaciados */
+    --spacing-xs: 4px;
+    --spacing-s: 8px;
+    --spacing-m: 16px;
+    --spacing-l: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 48px;
+
+    /* Bordes */
+    --radius-small: 4px;
+    --radius-medium: 8px;
+    --radius-large: 12px;
+
+    /* Sombras */
+    --shadow-card: 0 4px 16px rgba(23, 59, 87, 0.08);
+    --shadow-hover: 0 8px 24px rgba(23, 59, 87, 0.12);
+
+    /* Transiciones */
+    --transition: 0.3s ease;
+}
+
+
+/* ==========================================
+   2. RESETEO Y ESTILOS GENERALES
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--color-secondary);
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* ==========================================
+   3. BOTONES GENERALES
+========================================== */
+
+.boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 24px;
+    border-radius: var(--radius-medium);
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.boton-principal {
+    color: var(--color-surface);
+    background-color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+}
+
+.boton-principal:hover {
+    color: var(--color-surface);
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    transform: translateY(-2px);
+}
+
+.boton-secundario {
+    color: var(--color-primary);
+    background-color: transparent;
+    border: 1px solid var(--color-primary);
+}
+
+.boton-secundario:hover {
+    color: var(--color-primary);
+    background-color: #E0F2F1;
+}
+
+.boton-claro {
+    color: var(--color-primary);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-surface);
+}
+
+.boton-claro:hover {
+    color: var(--color-primary);
+    background-color: #E0F2F1;
+    transform: translateY(-2px);
+}
+
+.boton:focus-visible,
+a:focus-visible {
+    outline: 2px solid var(--color-secondary);
+    outline-offset: 4px;
+}
+
+
+/* ==========================================
+   4. CABECERA Y NAVEGACIÓN
+========================================== */
+
+.cabecera {
+    width: 100%;
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.cabecera-contenido {
+    min-height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-l);
+}
+
+/* Identidad de la clínica */
+
+.identidad {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--color-primary);
+}
+
+.identidad:hover {
+    color: var(--color-primary);
+}
+
+.logo {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-medium);
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.nombre-clinica {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+}
+
+.nombre-clinica strong {
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+.nombre-clinica small {
+    color: var(--color-text-secondary);
+    font-size: 12px;
+}
+
+/* Navegación */
+
+.navegacion {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xl);
+}
+
+.navegacion a {
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.navegacion a:hover,
+.navegacion .enlace-activo {
+    color: var(--color-primary);
+}
+
+/* Acceso a usuarios */
+
+.acceso-usuarios {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-m);
+}
+
+.enlace-login {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* ==========================================
+   5. SECCIÓN PRINCIPAL (HERO)
+========================================== */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 90px 0;
+    background-color: var(--color-background);
+}
+
+.hero-contenido {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 60px;
+}
+
+/* Texto principal */
+
+.hero-texto {
+    max-width: 650px;
+}
+
+.etiqueta-hero,
+.etiqueta-seccion {
+    display: inline-block;
+    color: var(--color-secondary);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.etiqueta-hero {
+    margin-bottom: var(--spacing-m);
+}
+
+.hero-texto h1 {
+    max-width: 600px;
+    margin-bottom: var(--spacing-l);
+    color: var(--color-primary);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-texto > p {
+    max-width: 570px;
+    margin-bottom: var(--spacing-xl);
+    color: var(--color-text-secondary);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.hero-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-m);
+}
+
+.hero-texto .texto-auxiliar {
+    margin-top: var(--spacing-l);
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.texto-auxiliar a {
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+
+/* ==========================================
+   6. ELEMENTO VISUAL DECORATIVO
+========================================== */
+
+.hero-visual {
+    position: relative;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tarjeta-visual {
+    position: relative;
+    z-index: 2;
+    width: 340px;
+    min-height: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    box-shadow: var(--shadow-card);
+    text-align: center;
+}
+
+.icono-visual {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-l);
+    border-radius: 50%;
+    background-color: #E0F2F1;
+    color: var(--color-secondary);
+    font-size: 50px;
+    font-weight: 300;
+}
+
+.tarjeta-visual h2 {
+    margin-bottom: var(--spacing-s);
+    color: var(--color-primary);
+    font-size: 23px;
+}
+
+.tarjeta-visual p {
+    margin-bottom: var(--spacing-l);
+    color: var(--color-text-secondary);
+    font-size: 14px;
+}
+
+.linea-decorativa {
+    width: 60px;
+    height: 3px;
+    margin-bottom: var(--spacing-m);
+    border-radius: 10px;
+    background-color: var(--color-secondary);
+}
+
+.tarjeta-visual span {
+    color: var(--color-text-secondary);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.circulo-decorativo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background-color: rgba(36, 157, 154, 0.10);
+}
+
+
+/* ==========================================
+   7. SECCIÓN SOBRE EL PORTAL
+========================================== */
+
+.sobre-nosotros {
+    padding: 90px 0;
+    background-color: var(--color-surface);
+}
+
+.titulo-seccion {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.etiqueta-seccion {
+    margin-bottom: var(--spacing-m);
+}
+
+.titulo-seccion h2 {
+    margin-bottom: var(--spacing-m);
+    color: var(--color-primary);
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.titulo-seccion p {
+    color: var(--color-text-secondary);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   8. TARJETAS DE CARACTERÍSTICAS
+========================================== */
+
+.tarjetas-caracteristicas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-l);
+}
+
+.tarjeta-caracteristica {
+    padding: 32px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-large);
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+}
+
+.tarjeta-caracteristica:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-5px);
+}
+
+.icono-caracteristica {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-l);
+    border-radius: var(--radius-medium);
+    background-color: #E0F2F1;
+    color: var(--color-secondary);
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.tarjeta-caracteristica h3 {
+    margin-bottom: var(--spacing-s);
+    color: var(--color-primary);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.tarjeta-caracteristica p {
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   9. SECCIÓN DE ACCESO AL REGISTRO
+========================================== */
+
+.seccion-acceso {
+    padding: 55px 0;
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+}
+
+.acceso-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-xl);
+}
+
+.acceso-contenido h2 {
+    margin-bottom: var(--spacing-s);
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.acceso-contenido p {
+    color: #DCE8EF;
+    font-size: 15px;
+}
+
+
+/* ==========================================
+   10. PIE DE PÁGINA
+========================================== */
+
+.pie-pagina {
+    padding: 45px 0 25px;
+    background-color: #102D43;
+    color: var(--color-surface);
+}
+
+.pie-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+}
+
+.pie-identidad strong {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+.pie-identidad p {
+    margin-top: var(--spacing-s);
+    color: #C5D4DE;
+    font-size: 13px;
+}
+
+.pie-enlaces {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: var(--spacing-l);
+}
+
+.pie-enlaces a {
+    color: #DCE8EF;
+    font-size: 13px;
+}
+
+.pie-enlaces a:hover {
+    color: var(--color-secondary);
+}
+
+.pie-informacion {
+    grid-column: 1 / -1;
+    padding-top: var(--spacing-l);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    text-align: center;
+}
+
+.pie-informacion p {
+    margin-bottom: var(--spacing-xs);
+    color: #DCE8EF;
+    font-size: 12px;
+}
+
+.pie-informacion small {
+    color: #B8CAD6;
+    font-size: 11px;
+}
+
+
+/* ==========================================
+   11. ESTILOS RESPONSIVE
+========================================== */
+
+/* TABLETS: hasta 1023px */
+
+@media (max-width: 1023px) {
+
+    .cabecera-contenido {
+        flex-wrap: wrap;
+        padding: var(--spacing-m) 0;
+    }
+
+    .hero {
+        padding: 70px 0;
+    }
+
+    .hero-contenido {
+        grid-template-columns: 1fr 0.8fr;
+        gap: var(--spacing-xl);
+    }
+
+    .hero-texto h1 {
+        font-size: 34px;
+    }
+
+    .tarjeta-visual {
+        width: 280px;
+        padding: 30px;
+    }
+
+    .tarjetas-caracteristicas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* MÓVILES: hasta 767px */
+
+@media (max-width: 767px) {
+
+    .contenedor {
+        width: 90%;
+    }
+
+    /* Cabecera */
+
+    .cabecera-contenido {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--spacing-m);
+    }
+
+    .identidad {
+        justify-content: center;
+    }
+
+    .navegacion {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: var(--spacing-m);
+    }
+
+    .acceso-usuarios {
+        justify-content: center;
+    }
+
+    /* Hero */
+
+    .hero {
+        padding: 55px 0;
+    }
+
+    .hero-contenido {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .hero-texto {
+        text-align: center;
+    }
+
+    .hero-texto h1 {
+        font-size: 30px;
+    }
+
+    .hero-texto > p {
+        font-size: 15px;
+    }
+
+    .hero-botones {
+        flex-direction: column;
+    }
+
+    .hero-botones .boton {
+        width: 100%;
+    }
+
+    .hero-visual {
+        min-height: 300px;
+    }
+
+    .tarjeta-visual {
+        width: 100%;
+        max-width: 340px;
+    }
+
+    /* Sobre el portal */
+
+    .sobre-nosotros {
+        padding: 60px 0;
+    }
+
+    .titulo-seccion h2 {
+        font-size: 24px;
+    }
+
+    .tarjetas-caracteristicas {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta-caracteristica {
+        padding: 24px;
+    }
+
+    /* Acceso */
+
+    .seccion-acceso {
+        padding: 45px 0;
+    }
+
+    .acceso-contenido {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .acceso-contenido h2 {
+        font-size: 22px;
+    }
+
+    /* Pie de página */
+
+    .pie-contenido {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .pie-enlaces {
+        justify-content: center;
+    }
+
+    .pie-informacion {
+        grid-column: auto;
+    }
+
+}
+
+
+/* MÓVILES PEQUEÑOS */
+
+@media (max-width: 400px) {
+
+    .nombre-clinica strong {
+        font-size: 13px;
+    }
+
+    .navegacion {
+        gap: var(--spacing-s);
+    }
+
+    .navegacion a {
+        font-size: 12px;
+    }
+
+    .acceso-usuarios {
+        flex-direction: column;
+    }
+
+    .hero-texto h1 {
+        font-size: 27px;
+    }
+
+    .titulo-seccion h2 {
+        font-size: 22px;
+    }
+
+}
+
+
+/* ==========================================
+   12. PREFERENCIAS DE MOVIMIENTO
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+
+}

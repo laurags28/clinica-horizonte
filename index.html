@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Portal de pacientes de Clínica Horizonte. Accede a tu cuenta o crea un nuevo perfil.">
+
+    <title>Clínica Horizonte | Portal de pacientes</title>
+
+    <!-- Hoja de estilos principal -->
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+    <!-- CABECERA -->
+    <header class="cabecera">
+
+        <div class="contenedor cabecera-contenido">
+
+            <!-- Identidad de la clínica -->
+            <a href="index.html" class="identidad" aria-label="Clínica Horizonte, página de inicio">
+
+                <span class="logo">H</span>
+
+                <span class="nombre-clinica">
+                    <strong>CLÍNICA HORIZONTE</strong>
+                    <small>Portal de pacientes</small>
+                </span>
+
+            </a>
+
+            <!-- Navegación principal -->
+            <nav class="navegacion" aria-label="Navegación principal">
+
+                <a href="index.html" class="enlace-activo">Inicio</a>
+
+                <a href="#sobre-nosotros">Sobre el portal</a>
+
+                <a href="#privacidad">Privacidad</a>
+
+            </nav>
+
+            <!-- Acceso a usuarios -->
+            <div class="acceso-usuarios">
+
+                <a href="login.html" class="enlace-login">
+                    Iniciar sesión
+                </a>
+
+                <a href="registro.html" class="boton boton-principal">
+                    Crear cuenta
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- SECCIÓN DE BIENVENIDA -->
+        <section class="hero">
+
+            <div class="contenedor hero-contenido">
+
+                <div class="hero-texto">
+
+                    <span class="etiqueta-hero">
+                        PORTAL DE PACIENTES
+                    </span>
+
+                    <h1>
+                        Tu salud, nuestra prioridad.
+                    </h1>
+
+                    <p>
+                        En Clínica Horizonte trabajamos para ofrecerte
+                        una experiencia cercana, sencilla y accesible.
+                        Accede a tu espacio personal y descubre todas
+                        las ventajas de nuestro portal de pacientes.
+                    </p>
+
+                    <div class="hero-botones">
+
+                        <a href="registro.html" class="boton boton-principal">
+                            Crear una cuenta
+                        </a>
+
+                        <a href="login.html" class="boton boton-secundario">
+                            Ya tengo una cuenta
+                        </a>
+
+                    </div>
+
+                    <p class="texto-auxiliar">
+                        ¿Ya tienes una cuenta?
+                        <a href="login.html">Inicia sesión aquí</a>.
+                    </p>
+
+                </div>
+
+                <!-- Elemento visual de bienvenida -->
+                <div class="hero-visual" aria-hidden="true">
+
+                    <div class="tarjeta-visual">
+
+                        <div class="icono-visual">
+                            +
+                        </div>
+
+                        <h2>Clínica Horizonte</h2>
+
+                        <p>
+                            Cuidamos de ti con confianza,
+                            profesionalidad y cercanía.
+                        </p>
+
+                        <div class="linea-decorativa"></div>
+
+                        <span>Tu espacio personal</span>
+
+                    </div>
+
+                    <div class="circulo-decorativo"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SECCIÓN INFORMATIVA -->
+        <section class="sobre-nosotros" id="sobre-nosotros">
+
+            <div class="contenedor">
+
+                <div class="titulo-seccion">
+
+                    <span class="etiqueta-seccion">
+                        CLÍNICA HORIZONTE
+                    </span>
+
+                    <h2>Un espacio pensado para ti</h2>
+
+                    <p>
+                        Nuestro portal está diseñado para facilitar
+                        el acceso de los pacientes a su espacio personal,
+                        ofreciendo una experiencia cómoda y segura.
+                    </p>
+
+                </div>
+
+
+                <div class="tarjetas-caracteristicas">
+
+                    <!-- Tarjeta 1 -->
+                    <article class="tarjeta-caracteristica">
+
+                        <div class="icono-caracteristica">
+                            <span aria-hidden="true">01</span>
+                        </div>
+
+                        <h3>Acceso personal</h3>
+
+                        <p>
+                            Crea tu cuenta y accede a tu espacio
+                            personal mediante tu correo electrónico
+                            y contraseña.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Tarjeta 2 -->
+                    <article class="tarjeta-caracteristica">
+
+                        <div class="icono-caracteristica">
+                            <span aria-hidden="true">02</span>
+                        </div>
+
+                        <h3>Datos protegidos</h3>
+
+                        <p>
+                            La autenticación se gestiona mediante
+                            Firebase, utilizando servicios de
+                            identificación de usuarios.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Tarjeta 3 -->
+                    <article class="tarjeta-caracteristica">
+
+                        <div class="icono-caracteristica">
+                            <span aria-hidden="true">03</span>
+                        </div>
+
+                        <h3>Fácil de utilizar</h3>
+
+                        <p>
+                            Disfruta de una interfaz sencilla,
+                            intuitiva y adaptada tanto a ordenadores
+                            como a dispositivos móviles.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SECCIÓN DE ACCESO -->
+        <section class="seccion-acceso">
+
+            <div class="contenedor acceso-contenido">
+
+                <div>
+
+                    <h2>¿Todavía no tienes una cuenta?</h2>
+
+                    <p>
+                        Regístrate en nuestro portal y comienza
+                        a disfrutar de tu espacio personal.
+                    </p>
+
+                </div>
+
+                <a href="registro.html" class="boton boton-claro">
+                    Registrarme ahora
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina" id="privacidad">
+
+        <div class="contenedor pie-contenido">
+
+            <div class="pie-identidad">
+
+                <strong>CLÍNICA HORIZONTE</strong>
+
+                <p>
+                    Un espacio digital pensado para ti.
+                </p>
+
+            </div>
+
+
+            <div class="pie-enlaces">
+
+                <a href="registro.html">Crear cuenta</a>
+
+                <a href="login.html">Iniciar sesión</a>
+
+                <a href="#privacidad">Privacidad</a>
+
+            </div>
+
+
+            <div class="pie-informacion">
+
+                <p>
+                    © 2026 Clínica Horizonte.
+                    Todos los derechos reservados.
+                </p>
+
+                <small>
+                    Proyecto académico ficticio.
+                    No constituye un servicio sanitario real.
+                </small>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
