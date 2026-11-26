@@ -794,3 +794,345 @@ a:focus-visible {
     }
 
 }
+
+
+/* ==========================================
+   13. PÁGINA DE REGISTRO
+========================================== */
+
+.pagina-registro {
+    padding: 55px 0 70px;
+    background-color: var(--color-background);
+}
+
+/* Introducción */
+
+.registro-introduccion {
+    max-width: 750px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.registro-introduccion h1 {
+    margin: 12px 0;
+    color: var(--color-primary);
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.registro-introduccion p {
+    color: var(--color-text-secondary);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* Tarjeta principal */
+
+.tarjeta-registro {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-large);
+    box-shadow: var(--shadow-card);
+}
+
+
+/* Cabecera del formulario */
+
+.registro-cabecera {
+    margin-bottom: 30px;
+}
+
+.registro-cabecera h2 {
+    margin-bottom: 8px;
+    color: var(--color-primary);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.registro-cabecera p {
+    color: var(--color-text-secondary);
+    font-size: 14px;
+}
+
+.registro-cabecera .texto-obligatorio {
+    margin-top: 10px;
+    color: var(--color-text-secondary);
+    font-size: 13px;
+}
+
+
+/* Distribución de campos */
+
+.grupo-campos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.grupo-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+    min-width: 0;
+}
+
+.grupo-formulario label {
+    color: var(--color-text);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* Campos de entrada */
+
+.grupo-formulario input {
+    width: 100%;
+    min-width: 0;
+    height: 48px;
+    padding: 12px 16px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-medium);
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    font-size: 14px;
+    outline: none;
+    transition: var(--transition);
+}
+
+.grupo-formulario input::placeholder {
+    color: var(--color-text-secondary);
+}
+
+.grupo-formulario input:hover {
+    border-color: #AABBC5;
+}
+
+.grupo-formulario input:focus {
+    border: 2px solid var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(36, 157, 154, 0.12);
+}
+
+.grupo-formulario input:focus-visible {
+    outline: 2px solid var(--color-secondary);
+    outline-offset: 2px;
+}
+
+
+/* Campos de contraseña */
+
+.campo-password {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.campo-password input {
+    padding-right: 55px;
+}
+
+.boton-mostrar-password {
+    position: absolute;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: var(--radius-small);
+    background-color: transparent;
+    color: var(--color-text-secondary);
+    font-size: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.boton-mostrar-password:hover {
+    background-color: #E0F2F1;
+    color: var(--color-primary);
+}
+
+.boton-mostrar-password:focus-visible {
+    outline: 2px solid var(--color-secondary);
+}
+
+
+/* Texto de ayuda y mensajes de error */
+
+.texto-ayuda {
+    color: var(--color-text-secondary);
+    font-size: 12px;
+}
+
+.mensaje-error {
+    min-height: 0;
+    color: var(--color-error);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.grupo-formulario input.error {
+    border: 2px solid var(--color-error);
+    background-color: var(--color-error-background);
+}
+
+
+/* Aviso de privacidad */
+
+.aviso-privacidad {
+    margin: 25px 0;
+    padding: 20px;
+    border: 1px solid #C9DFEB;
+    border-radius: var(--radius-medium);
+    background-color: #E3F2FD;
+}
+
+.aviso-privacidad h3 {
+    margin-bottom: 10px;
+    color: var(--color-primary);
+    font-size: 16px;
+}
+
+.aviso-privacidad p {
+    margin-bottom: 8px;
+    color: #34566B;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* Checkbox de privacidad */
+
+.grupo-privacidad {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 20px 0 8px;
+}
+
+.grupo-privacidad input {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    accent-color: var(--color-primary);
+    cursor: pointer;
+}
+
+.grupo-privacidad label {
+    color: var(--color-text);
+    font-size: 13px;
+    line-height: 1.6;
+    cursor: pointer;
+}
+
+
+/* Mensaje general del formulario */
+
+.mensaje-formulario {
+    margin: 15px 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.mensaje-formulario:empty {
+    display: none;
+}
+
+
+/* Botón de registro */
+
+.boton-registro {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+
+/* Enlace al inicio de sesión */
+
+.enlace-login-registro {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.enlace-login-registro p {
+    color: var(--color-text-secondary);
+    font-size: 14px;
+}
+
+.enlace-login-registro a {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.enlace-login-registro a:hover {
+    color: var(--color-secondary);
+    text-decoration: underline;
+}
+
+
+/* ==========================================
+   14. RESPONSIVE DEL REGISTRO
+========================================== */
+
+@media (max-width: 767px) {
+
+    .pagina-registro {
+        padding: 40px 0 50px;
+    }
+
+    .registro-introduccion h1 {
+        font-size: 30px;
+    }
+
+    .tarjeta-registro {
+        padding: 24px 20px;
+    }
+
+    .grupo-campos {
+        grid-template-columns: 1fr;
+        gap: 0;
+        margin-bottom: 0;
+    }
+
+    .registro-cabecera h2 {
+        font-size: 21px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .tarjeta-registro {
+        padding: 20px 15px;
+    }
+
+    .registro-introduccion h1 {
+        font-size: 27px;
+    }
+
+}
+
+
+/* Estados de los mensajes del formulario */
+
+.mensaje-exito {
+    padding: 12px;
+    border-radius: var(--radius-medium);
+    background-color: var(--color-success-background);
+    color: var(--color-success);
+}
+
+.mensaje-error-general {
+    padding: 12px;
+    border-radius: var(--radius-medium);
+    background-color: var(--color-error-background);
+    color: var(--color-error);
+}

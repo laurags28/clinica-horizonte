@@ -1,0 +1,449 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Regístrate en el portal de pacientes de Clínica Horizonte.">
+
+    <title>Crear cuenta | Clínica Horizonte</title>
+
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- JavaScript de validaciones -->
+    <script src="js/validaciones.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- CABECERA -->
+    <header class="cabecera">
+
+        <div class="contenedor cabecera-contenido">
+
+            <!-- Identidad de la clínica -->
+            <a href="index.html" class="identidad"
+                aria-label="Clínica Horizonte, página de inicio">
+
+                <span class="logo">H</span>
+
+                <span class="nombre-clinica">
+                    <strong>CLÍNICA HORIZONTE</strong>
+                    <small>Portal de pacientes</small>
+                </span>
+
+            </a>
+
+            <!-- Navegación -->
+            <nav class="navegacion" aria-label="Navegación principal">
+
+                <a href="index.html">Inicio</a>
+
+                <a href="login.html">Iniciar sesión</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="pagina-registro">
+
+        <div class="contenedor">
+
+            <!-- Introducción -->
+            <div class="registro-introduccion">
+
+                <span class="etiqueta-seccion">
+                    PORTAL DE PACIENTES
+                </span>
+
+                <h1>Crear una cuenta</h1>
+
+                <p>
+                    Regístrate en Clínica Horizonte y crea tu espacio
+                    personal. Introduce tus datos para completar
+                    el proceso de registro.
+                </p>
+
+            </div>
+
+
+            <!-- TARJETA DEL FORMULARIO -->
+            <section class="tarjeta-registro">
+
+                <div class="registro-cabecera">
+
+                    <h2>Datos personales</h2>
+
+                    <p>
+                        Completa los siguientes campos para crear
+                        tu cuenta de paciente.
+                    </p>
+
+                    <p class="texto-obligatorio">
+                        Los campos marcados con (*) son obligatorios.
+                    </p>
+
+                </div>
+
+
+                <!-- FORMULARIO -->
+                <form id="registroForm" novalidate>
+
+                    <!-- NOMBRE Y APELLIDOS -->
+                    <div class="grupo-campos">
+
+                        <div class="grupo-formulario">
+
+                            <label for="nombre">
+                                Nombre *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nombre"
+                                name="nombre"
+                                placeholder="Introduce tu nombre"
+                                autocomplete="given-name"
+                                minlength="2"
+                                maxlength="50"
+                                required
+                            >
+
+                            <small class="mensaje-error" id="errorNombre"></small>
+
+                        </div>
+
+
+                        <div class="grupo-formulario">
+
+                            <label for="apellidos">
+                                Apellidos *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="apellidos"
+                                name="apellidos"
+                                placeholder="Introduce tus apellidos"
+                                autocomplete="family-name"
+                                minlength="2"
+                                maxlength="80"
+                                required
+                            >
+
+                            <small class="mensaje-error" id="errorApellidos"></small>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CORREO Y TELÉFONO -->
+                    <div class="grupo-campos">
+
+                        <div class="grupo-formulario">
+
+                            <label for="email">
+                                Correo electrónico *
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="ejemplo@correo.com"
+                                autocomplete="email"
+                                maxlength="254"
+                                required
+                            >
+
+                            <small class="mensaje-error" id="errorEmail"></small>
+
+                        </div>
+
+
+                        <div class="grupo-formulario">
+
+                            <label for="telefono">
+                                Teléfono
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="telefono"
+                                name="telefono"
+                                placeholder="Ej. 600 123 456"
+                                autocomplete="tel"
+                                maxlength="20"
+                            >
+
+                            <small class="mensaje-error" id="errorTelefono"></small>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FECHA DE NACIMIENTO -->
+                    <div class="grupo-campos">
+
+                        <div class="grupo-formulario">
+
+                            <label for="fechaNacimiento">
+                                Fecha de nacimiento *
+                            </label>
+
+                            <input
+                                type="date"
+                                id="fechaNacimiento"
+                                name="fechaNacimiento"
+                                autocomplete="bday"
+                                required
+                            >
+
+                            <small class="mensaje-error" id="errorFechaNacimiento"></small>
+
+                        </div>
+
+
+                        <!-- DIRECCIÓN -->
+                        <div class="grupo-formulario">
+
+                            <label for="direccion">
+                                Dirección postal *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="direccion"
+                                name="direccion"
+                                placeholder="Calle, número, localidad..."
+                                autocomplete="street-address"
+                                maxlength="150"
+                                required
+                            >
+
+                            <small class="mensaje-error" id="errorDireccion"></small>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CONTRASEÑA -->
+                    <div class="grupo-formulario">
+
+                        <label for="password">
+                            Contraseña *
+                        </label>
+
+                        <div class="campo-password">
+
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Introduce una contraseña"
+                                autocomplete="new-password"
+                                minlength="8"
+                                maxlength="64"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="boton-mostrar-password"
+                                data-toggle-password="password"
+                                aria-label="Mostrar contraseña"
+                                aria-pressed="false"
+                            >
+                                <span aria-hidden="true">◉</span>
+                            </button>
+
+                        </div>
+
+                        <small class="texto-ayuda">
+                            La contraseña debe tener al menos 8 caracteres.
+                        </small>
+
+                        <small class="mensaje-error" id="errorPassword"></small>
+
+                    </div>
+
+
+                    <!-- REPETIR CONTRASEÑA -->
+                    <div class="grupo-formulario">
+
+                        <label for="confirmarPassword">
+                            Repetir contraseña *
+                        </label>
+
+                        <div class="campo-password">
+
+                            <input
+                                type="password"
+                                id="confirmarPassword"
+                                name="confirmarPassword"
+                                placeholder="Vuelve a introducir la contraseña"
+                                autocomplete="new-password"
+                                minlength="8"
+                                maxlength="64"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="boton-mostrar-password"
+                                data-toggle-password="confirmarPassword"
+                                aria-label="Mostrar contraseña"
+                                aria-pressed="false"
+                            >
+                                <span aria-hidden="true">◉</span>
+                            </button>
+
+                        </div>
+
+                        <small class="mensaje-error" id="errorConfirmarPassword"></small>
+
+                    </div>
+
+
+                    <!-- AVISO DE PRIVACIDAD -->
+                    <div class="aviso-privacidad">
+
+                        <h3>Información sobre privacidad</h3>
+
+                        <p>
+                            Los datos personales facilitados se utilizarán
+                            para gestionar el registro, la identificación
+                            y el perfil de usuario del portal ficticio
+                            de Clínica Horizonte.
+                        </p>
+
+                        <p>
+                            Las credenciales de acceso serán gestionadas
+                            mediante Firebase Authentication. No se
+                            almacenarán contraseñas en la base de datos
+                            propia de la aplicación.
+                        </p>
+
+                    </div>
+
+
+                    <!-- ACEPTACIÓN -->
+                    <div class="grupo-privacidad">
+
+                        <input
+                            type="checkbox"
+                            id="aceptarPrivacidad"
+                            name="aceptarPrivacidad"
+                            required
+                        >
+
+                        <label for="aceptarPrivacidad">
+
+                            He leído la información sobre privacidad
+                            y acepto el tratamiento de mis datos
+                            para las finalidades indicadas. *
+
+                        </label>
+
+                    </div>
+
+                    <small class="mensaje-error" id="errorPrivacidad"></small>
+
+
+                    <!-- MENSAJE GENERAL -->
+                    <div
+                        id="mensajeRegistro"
+                        class="mensaje-formulario"
+                        role="alert"
+                        aria-live="polite"
+                    ></div>
+
+
+                    <!-- BOTÓN DE REGISTRO -->
+                    <button
+                        type="submit"
+                        class="boton boton-principal boton-registro"
+                    >
+                        Crear mi cuenta
+                    </button>
+
+
+                    <!-- ENLACE AL LOGIN -->
+                    <div class="enlace-login-registro">
+
+                        <p>
+                            ¿Ya tienes una cuenta?
+
+                            <a href="login.html">
+                                Inicia sesión aquí
+                            </a>
+                        </p>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+
+        <div class="contenedor pie-contenido">
+
+            <div class="pie-identidad">
+
+                <strong>CLÍNICA HORIZONTE</strong>
+
+                <p>
+                    Un espacio digital pensado para ti.
+                </p>
+
+            </div>
+
+
+            <div class="pie-enlaces">
+
+                <a href="index.html">Inicio</a>
+
+                <a href="login.html">Iniciar sesión</a>
+
+            </div>
+
+
+            <div class="pie-informacion">
+
+                <p>
+                    © 2026 Clínica Horizonte.
+                    Todos los derechos reservados.
+                </p>
+
+                <small>
+                    Proyecto académico ficticio.
+                    No constituye un servicio sanitario real.
+                </small>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
